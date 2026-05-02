@@ -35,6 +35,7 @@ public class TradeReconciliationDbContext : DbContext
           {
                r.HasIndex(x => x.TradeIdentifier);
                r.HasIndex(x => x.ReconciledAt);
+               r.HasIndex(x => x.TradeDate);
           });
      }
 }

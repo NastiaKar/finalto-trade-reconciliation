@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TradeReconciliation.Core.Data;
+using TradeReconciliation.Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<TradeReconciliationDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+builder.Services.AddScoped<IMatchingStrategy, ExactMatchStrategy>();
+builder.Services.AddScoped<IReconciliationService, ReconciliationService>();
 
 var app = builder.Build();
 

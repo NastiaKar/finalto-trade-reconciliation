@@ -47,25 +47,25 @@ public class DataSeeder
         {
             new Trade
             {
-                TradeIdentifier = "T-001", Source = TradeSource.Internal, Symbol = "EUR/USD",
+                TradeIdentifier = "T-001", Source = TradeSource.External, Symbol = "EUR/USD",
                 Side = TradeSide.Buy, Quantity = 1_000_000m, Price = 1.0850m, TradeDate = tradeDate,
                 Counterparty = "Bank A", AccountId = account1.Id
             },
             new Trade
             {
-                TradeIdentifier =  "T-002", Source = TradeSource.Internal, Symbol = "GBP/USD",
+                TradeIdentifier =  "T-002", Source = TradeSource.External, Symbol = "GBP/USD",
                 Side = TradeSide.Sell, Quantity = 500_000m, Price = 1.2655m, TradeDate = tradeDate,
                 Counterparty = "Bank B", AccountId = account1.Id
             },
             new Trade
             {
-                TradeIdentifier =   "T-003", Source = TradeSource.Internal, Symbol = "USD/JPY",
+                TradeIdentifier =   "T-003", Source = TradeSource.External, Symbol = "USD/JPY",
                 Side = TradeSide.Buy, Quantity = 250_000m, Price = 154.20m, TradeDate = tradeDate,
                 Counterparty = "Bank C", AccountId = account2.Id
             },
             new Trade
             {
-                TradeIdentifier = "T-005", Source = TradeSource.Internal, Symbol = "AUD/USD",
+                TradeIdentifier = "T-005", Source = TradeSource.External, Symbol = "AUD/USD",
                 Side = TradeSide.Buy, Quantity = 250_000m, Price = 0.6520m, TradeDate = tradeDate,
                 Counterparty = "Bank D", AccountId = account1.Id
             },

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TradeReconciliation.Core.Data;
 
@@ -11,9 +12,11 @@ using TradeReconciliation.Core.Data;
 namespace TradeReconciliation.Core.Migrations
 {
     [DbContext(typeof(TradeReconciliationDbContext))]
-    partial class TradeReconciliationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260502205843_AddTradeDateToReconciliationResult")]
+    partial class AddTradeDateToReconciliationResult
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
