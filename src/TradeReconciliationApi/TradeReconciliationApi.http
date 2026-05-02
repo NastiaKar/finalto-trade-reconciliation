@@ -1,0 +1,6 @@
+@TradeReconciliationApi_HostAddress = http://localhost:5028
+
+GET {{TradeReconciliationApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
