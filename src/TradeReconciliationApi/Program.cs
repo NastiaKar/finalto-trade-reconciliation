@@ -14,6 +14,7 @@ builder.Services.AddDbContext<TradeReconciliationDbContext>(options =>
 builder.Services.AddScoped<IMatchingStrategy, ExactMatchStrategy>();
 builder.Services.AddScoped<IReconciliationService, ReconciliationService>();
 builder.Services.AddScoped<IPnLCalculator, PnLCalculator>();
+builder.Services.AddScoped<ITradeImporter, CsvTradeImporter>();
 
 var app = builder.Build();
 
