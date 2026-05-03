@@ -13,6 +13,7 @@ builder.Services.AddDbContext<TradeReconciliationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 builder.Services.AddScoped<IMatchingStrategy, ExactMatchStrategy>();
 builder.Services.AddScoped<IReconciliationService, ReconciliationService>();
+builder.Services.AddScoped<IPnLCalculator, PnLCalculator>();
 
 var app = builder.Build();
 
